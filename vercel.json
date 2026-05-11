@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {"src": "package.json", "use": "@vercel/static-build", "config": {"distDir": "dist"}},
+    {"src": "api/**/*.ts", "use": "@vercel/node"}
+  ],
+  "rewrites": [
+    { "source": "/api/helpscout/update_aaid", "destination": "/api/update_helpscout_aaid_property.ts" },
+    { "source": "/api/helpscout/key_account_tag", "destination": "/api/update_helpscout_key_account_tag.ts" },
+    { "source": "/api/helpscout/am_tag", "destination": "/api/update_helpscout_am_tag.ts" },
+    { "source": "/api/chartmogul/customer", "destination": "/api/cm_get_customer.ts" },
+    { "source": "/api/chartmogul/contacts", "destination": "/api/cm_get_contact.ts" },
+    { "source": "/api/chartmogul/subscriptions", "destination": "/api/cm_get_subscription.ts" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}

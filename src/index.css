@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  display: flex;
+}
+
+:root {
+  --ui-kit-text-font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
